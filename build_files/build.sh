@@ -11,6 +11,8 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf5 install -y htop
+dnf5 -y copr enable bazzite-org/bazzite
+dnf5 -y install wallpaper-engine-kde-plugin
 
 cp -ri /ctx/51numlock /usr/lib/dracut/modules.d
 
