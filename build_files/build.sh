@@ -14,7 +14,11 @@ set -ouex pipefail
 dnf5 -y copr enable bazzite-org/bazzite
 dnf5 -y install wallpaper-engine-kde-plugin
 
-cp -ri /ctx/51numlock /usr/lib/dracut/modules.d
+# Numlock in initramfs
+cp -r /ctx/51numlock /usr/lib/dracut/modules.d
+
+# Custom just commands
+cp /ctx/60-custom.just /usr/share/ublue-os/
 
 # Use a COPR Example:
 #
