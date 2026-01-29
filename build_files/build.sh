@@ -18,7 +18,7 @@ dnf5 -y install wallpaper-engine-kde-plugin
 cp -r /ctx/51numlock /usr/lib/dracut/modules.d
 
 # Custom just commands
-cp /ctx/60-custom.just /usr/share/ublue-os/
+cp /ctx/60-custom.just /usr/share/ublue-os/just/
 
 # Use a COPR Example:
 #
