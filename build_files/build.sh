@@ -14,9 +14,6 @@ set -ouex pipefail
 dnf5 -y copr enable bazzite-org/bazzite
 dnf5 -y install wallpaper-engine-kde-plugin
 
-dnf5 -y install touchegg
-systemctl enable touchegg
-
 # Numlock in initramfs
 cp -r /ctx/51numlock /usr/lib/dracut/modules.d
 
