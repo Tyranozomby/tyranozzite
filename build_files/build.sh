@@ -15,7 +15,11 @@ dnf5 -y copr enable bazzite-org/bazzite
 dnf5 -y install wallpaper-engine-kde-plugin
 
 dnf5 -y install git-remote-gcrypt
-curl -s https://install.zerotier.com | bash
+
+# ZeroTier One from their official repo
+mkdir -p /etc/yum.repos.d/
+cp /ctx/zerotier.repo /etc/yum.repos.d/
+dnf5 -y install zerotier-one
 
 # Numlock in initramfs
 cp -r /ctx/51numlock /usr/lib/dracut/modules.d
